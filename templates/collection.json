@@ -4,29 +4,67 @@
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "scheme-1"
+        "show_collection_image": true,
+        "color_scheme": "scheme-2"
       }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "products_per_page": 16,
-        "columns_desktop": 4,
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
+        "products_per_page": 12,
+        "columns_desktop": 3,
+        "image_ratio": "square",
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "enable_filtering": true,
+        "filter_type": "horizontal",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 56
+      }
+    },
+    "routine": {
+      "type": "lumae-routine",
+      "blocks": {
+        "cleanse": {
+          "type": "step",
+          "settings": {
+            "title": "Daily essentials",
+            "text": "<p>Products to cleanse, hydrate, and protect every day.</p>"
+          }
+        },
+        "treat": {
+          "type": "step",
+          "settings": {
+            "title": "Treatments",
+            "text": "<p>Serums and oils for specific skin needs.</p>"
+          }
+        },
+        "sets": {
+          "type": "step",
+          "settings": {
+            "title": "Kits",
+            "text": "<p>Ready-made routines to simplify the first purchase.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "cleanse",
+        "treat",
+        "sets"
+      ],
+      "settings": {
+        "eyebrow": "Shopping guide",
+        "heading": "Find products by routine step.",
+        "text": "<p>This section supports Shopify's native filters with an editorial read of the collection.</p>"
       }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "routine"
   ]
 }

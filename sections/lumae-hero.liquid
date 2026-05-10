@@ -1,0 +1,133 @@
+<section class="lumae-section lumae-hero">
+  <div class="lumae-page-width lumae-hero__inner">
+    <div class="lumae-hero__copy">
+      {% if section.settings.eyebrow != blank %}
+        <p class="lumae-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {% endif %}
+
+      {% if section.settings.heading != blank %}
+        <h1 class="lumae-hero__heading">{{ section.settings.heading | escape }}</h1>
+      {% endif %}
+
+      {% if section.settings.text != blank %}
+        <div class="lumae-hero__text">{{ section.settings.text }}</div>
+      {% endif %}
+
+      <div class="lumae-hero__actions">
+        {% if section.settings.button_label != blank %}
+          <a class="button" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">
+            {{ section.settings.button_label | escape }}
+          </a>
+        {% endif %}
+        {% if section.settings.secondary_label != blank %}
+          <a class="button button--secondary" href="{{ section.settings.secondary_link | default: routes.root_url }}">
+            {{ section.settings.secondary_label | escape }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="lumae-hero__visual" aria-label="{{ section.settings.visual_label | escape }}">
+      {% if section.settings.visual_image != blank %}
+        {{
+          section.settings.visual_image
+          | image_url: width: 1400
+          | image_tag:
+            class: 'lumae-hero__image',
+            loading: 'eager',
+            fetchpriority: 'high',
+            alt: section.settings.visual_label
+        }}
+      {% else %}
+        <img
+          class="lumae-hero__image"
+          src="{{ 'lumae-premium-skincare-hero.png' | asset_url }}"
+          alt="{{ section.settings.visual_label | escape }}"
+          loading="eager"
+          fetchpriority="high"
+          width="1400"
+          height="1400"
+        >
+      {% endif %}
+      {% if section.settings.visual_note != blank %}
+        <p class="lumae-hero__note">{{ section.settings.visual_note | escape }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lumae hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Premium botanical skincare"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Calm rituals for luminous skin."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Lumae combines dermatology-inspired actives, sensorial textures, and a simple routine for people who want effective skincare without excess.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Primary button label",
+      "default": "Shop the routine"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Secondary button label",
+      "default": "Meet the brand"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "text",
+      "id": "visual_label",
+      "label": "Visual label",
+      "default": "Lumae packaging on an editorial background"
+    },
+    {
+      "type": "image_picker",
+      "id": "visual_image",
+      "label": "Visual image"
+    },
+    {
+      "type": "text",
+      "id": "product_label",
+      "label": "Product label",
+      "default": "Lumae"
+    },
+    {
+      "type": "text",
+      "id": "visual_note",
+      "label": "Visual note",
+      "default": "A fictional product line created to demonstrate a complete Shopify experience."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lumae hero"
+    }
+  ]
+}
+{% endschema %}

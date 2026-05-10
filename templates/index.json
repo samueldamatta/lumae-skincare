@@ -1,65 +1,34 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
+    "lumae_hero": {
+      "type": "lumae-hero",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "eyebrow": "Premium botanical skincare",
+        "heading": "Calm rituals for luminous skin.",
+        "text": "<p>Lumae combines dermatology-inspired actives, sensorial textures, and a simple routine for people who want effective skincare without excess.</p>",
+        "button_label": "Shop the routine",
+        "button_link": "shopify://collections/all",
+        "secondary_label": "Meet the brand",
+        "secondary_link": "shopify://pages/about-lumae",
+        "visual_label": "Embalagens Lumae em fundo editorial",
+        "product_label": "Lumae",
+        "visual_note": "A fictional product line created to demonstrate a complete Shopify experience."
       }
     },
-    "rich_text": {
+    "brand_intro": {
       "type": "rich-text",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "Premium skincare without information overload.",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>The project prioritizes purchase clarity: a short routine, visible benefits, complete product pages, and an editorial visual system that elevates the brand.</p>"
           }
         }
       },
@@ -70,141 +39,184 @@
       "settings": {
         "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "padding_top": 56,
+        "padding_bottom": 36
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Essential routine",
         "heading_size": "h2",
         "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
+        "products_to_show": 6,
+        "columns_desktop": 3,
         "color_scheme": "scheme-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
+        "padding_top": 36,
+        "padding_bottom": 56
       }
     },
-    "collage": {
-      "type": "collage",
+    "lumae_routine": {
+      "type": "lumae-routine",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "cleanse": {
+          "type": "step",
           "settings": {
-            "collection": ""
+            "title": "Cleanse",
+            "text": "<p>A soft gel-cream cleanser that removes impurities and prepares the skin without tightness.</p>"
           }
         },
-        "product": {
-          "type": "product",
+        "treat": {
+          "type": "step",
           "settings": {
-            "product": "",
-            "second_image": false
+            "title": "Treat",
+            "text": "<p>Serums with niacinamide, antioxidants, and smart hydration for a daily routine.</p>"
           }
         },
-        "collection-1": {
-          "type": "collection",
+        "protect": {
+          "type": "step",
           "settings": {
-            "collection": ""
+            "title": "Protect",
+            "text": "<p>Moisturizer, night oil, and SPF to support barrier care, glow, and comfort.</p>"
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
+        "cleanse",
+        "treat",
+        "protect"
       ],
       "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "eyebrow": "3-step routine",
+        "heading": "Fewer steps, more consistency.",
+        "text": "<p>The store architecture organizes products by moment of use, reducing decision fatigue and making the buying path more intuitive.</p>"
       }
     },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
+    "lumae_editorial": {
+      "type": "lumae-editorial",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "products": {
+          "type": "kpi",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "value": "6",
+            "label": "fictional products"
           }
         },
-        "column2": {
-          "type": "column",
+        "journey": {
+          "type": "kpi",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "value": "5",
+            "label": "key screens"
           }
         },
-        "column3": {
-          "type": "column",
+        "platform": {
+          "type": "kpi",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "value": "OS 2.0",
+            "label": "tema Shopify"
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "products",
+        "journey",
+        "platform"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "eyebrow": "Portfolio case",
+        "heading": "Fictional brand, real shopping flow.",
+        "text": "<p>Lumae was designed to demonstrate visual direction, ecommerce UX, and customization of a modern Shopify theme.</p>",
+        "panel_heading": "UX decisions",
+        "panel_text": "<p>A routine-led homepage, collection with native filters, product pages that answer pre-purchase questions, and Dawn's cart preserved for reliability.</p>"
+      }
+    },
+    "lumae_proof": {
+      "type": "lumae-proof",
+      "blocks": {
+        "quote_1": {
+          "type": "quote",
+          "settings": {
+            "title": "Light texture",
+            "text": "<p>The routine feels premium while staying easy to understand.</p>",
+            "meta": "Fictional customer"
+          }
+        },
+        "quote_2": {
+          "type": "quote",
+          "settings": {
+            "title": "Guided shopping",
+            "text": "<p>The pages make it clear which product belongs to each moment of the routine.</p>",
+            "meta": "Teste de UX"
+          }
+        },
+        "quote_3": {
+          "type": "quote",
+          "settings": {
+            "title": "Consistent visuals",
+            "text": "<p>The art direction supports a premium perception across the entire journey.</p>",
+            "meta": "Portfolio case"
+          }
+        }
+      },
+      "block_order": [
+        "quote_1",
+        "quote_2",
+        "quote_3"
+      ],
+      "settings": {
+        "eyebrow": "Social proof",
+        "heading": "A store designed to convert without feeling generic.",
+        "text": "<p>Fictional testimonials help demonstrate hierarchy, trust, and storytelling in the shopping flow.</p>"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get rituals, launches, and behind-the-scenes notes.",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>A fictional newsletter block to demonstrate lead capture inside the Shopify theme.</p>"
+          }
+        },
+        "email_form": {
+          "type": "email_form"
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email_form"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
+    "lumae_hero",
+    "brand_intro",
     "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "lumae_routine",
+    "lumae_editorial",
+    "lumae_proof",
+    "newsletter"
   ]
 }

@@ -1,0 +1,82 @@
+{
+  "sections": {
+    "main": {
+      "type": "lumae-editorial",
+      "blocks": {
+        "focus": {
+          "type": "kpi",
+          "settings": {
+            "value": "Premium",
+            "label": "direcao visual"
+          }
+        },
+        "ux": {
+          "type": "kpi",
+          "settings": {
+            "value": "UX",
+            "label": "jornada clara"
+          }
+        },
+        "shopify": {
+          "type": "kpi",
+          "settings": {
+            "value": "Dawn",
+            "label": "tema base"
+          }
+        }
+      },
+      "block_order": [
+        "focus",
+        "ux",
+        "shopify"
+      ],
+      "settings": {
+        "eyebrow": "About Lumae",
+        "heading": "A fictional brand designed to feel market-ready.",
+        "text": "<p>Lumae Skincare was created as a portfolio project to study Shopify in practice: product setup, collection architecture, Dawn customization, and brand communication.</p>",
+        "panel_heading": "Positioning",
+        "panel_text": "<p>The brand speaks to people who want a premium, focused, and trustworthy routine. The visual system uses restraint, breathing room, and direct messaging to support perceived value.</p>"
+      }
+    },
+    "routine": {
+      "type": "lumae-routine",
+      "blocks": {
+        "clarity": {
+          "type": "step",
+          "settings": {
+            "title": "Clarity",
+            "text": "<p>Menus, sections, and pages guide customers by need and routine step.</p>"
+          }
+        },
+        "trust": {
+          "type": "step",
+          "settings": {
+            "title": "Trust",
+            "text": "<p>Product details, ingredients, usage guidance, and policies appear before the cart.</p>"
+          }
+        },
+        "finish": {
+          "type": "step",
+          "settings": {
+            "title": "Finish",
+            "text": "<p>Palette, spacing, and components were adjusted for an editorial result.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "clarity",
+        "trust",
+        "finish"
+      ],
+      "settings": {
+        "eyebrow": "Principles",
+        "heading": "What guides the experience.",
+        "text": "<p>The store was planned as a portfolio piece: polished to look at, but also coherent as an ecommerce experience.</p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "routine"
+  ]
+}

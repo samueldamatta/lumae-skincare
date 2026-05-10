@@ -1,0 +1,119 @@
+<section class="lumae-editorial">
+  <div class="lumae-page-width lumae-editorial__inner">
+    <div>
+      {% if section.settings.eyebrow != blank %}
+        <p class="lumae-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2 class="lumae-editorial__heading">{{ section.settings.heading | escape }}</h2>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <div class="lumae-editorial__text">{{ section.settings.text }}</div>
+      {% endif %}
+    </div>
+
+    <div class="lumae-editorial__panel">
+      {% if section.settings.panel_heading != blank %}
+        <h3 class="lumae-routine-card__title">{{ section.settings.panel_heading | escape }}</h3>
+      {% endif %}
+      {% if section.settings.panel_text != blank %}
+        <div class="lumae-routine-card__text">{{ section.settings.panel_text }}</div>
+      {% endif %}
+
+      <div class="lumae-editorial__kpis">
+        {% for block in section.blocks %}
+          <div class="lumae-editorial__kpi" {{ block.shopify_attributes }}>
+            <strong>{{ block.settings.value | escape }}</strong>
+            <span>{{ block.settings.label | escape }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lumae editorial",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "About the brand"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A fictional brand with a real shopping experience."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Lumae was created to demonstrate visual strategy, information architecture, and Shopify theme customization without depending on a real brand.</p>"
+    },
+    {
+      "type": "text",
+      "id": "panel_heading",
+      "label": "Panel heading",
+      "default": "UX decisions"
+    },
+    {
+      "type": "richtext",
+      "id": "panel_text",
+      "label": "Panel text",
+      "default": "<p>The navigation prioritizes routines, benefits, and hero products. The product page answers pre-purchase questions: ingredients, usage, shipping, and returns.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "kpi",
+      "name": "KPI",
+      "settings": [
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "6"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "fictional products"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lumae editorial",
+      "blocks": [
+        {
+          "type": "kpi",
+          "settings": {
+            "value": "6",
+            "label": "fictional products"
+          }
+        },
+        {
+          "type": "kpi",
+          "settings": {
+            "value": "3",
+            "label": "routine steps"
+          }
+        },
+        {
+          "type": "kpi",
+          "settings": {
+            "value": "OS 2.0",
+            "label": "base Shopify"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

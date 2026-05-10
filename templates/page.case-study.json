@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "main": {
+      "type": "lumae-editorial",
+      "blocks": {
+        "screens": {
+          "type": "kpi",
+          "settings": {
+            "value": "5",
+            "label": "key screens"
+          }
+        },
+        "products": {
+          "type": "kpi",
+          "settings": {
+            "value": "6",
+            "label": "seed products"
+          }
+        },
+        "stack": {
+          "type": "kpi",
+          "settings": {
+            "value": "Liquid",
+            "label": "customizacoes"
+          }
+        }
+      },
+      "block_order": [
+        "screens",
+        "products",
+        "stack"
+      ],
+      "settings": {
+        "eyebrow": "Case study",
+        "heading": "Lumae Skincare: a first Shopify store for portfolio.",
+        "text": "<p>This case documents how a base theme was transformed into a premium experience while preserving native ecommerce features.</p>",
+        "panel_heading": "Objective",
+        "panel_text": "<p>Learn the real Shopify theme workflow and build a presentable deliverable: navigable store, fictional products, key pages, and portfolio documentation.</p>"
+      }
+    },
+    "case_notes": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"lumae-section lumae-routine\"><div class=\"lumae-page-width\"><p class=\"lumae-eyebrow\">Process</p><h2 class=\"lumae-routine__heading\">Key decisions</h2><ul class=\"lumae-case-list\"><li>Dawn as the base to preserve Online Store 2.0 best practices, performance, and native cart behavior.</li><li>Narrative-led homepage: promise, products, routine, social proof, and email capture.</li><li>Product page with benefit, ingredient, usage, and policy blocks.</li><li>Collection page with native filters and sorting to demonstrate real ecommerce behavior.</li><li>Documentation includes setup, seed products, and a presentation checklist.</li></ul></div></section>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "case_notes"
+  ]
+}

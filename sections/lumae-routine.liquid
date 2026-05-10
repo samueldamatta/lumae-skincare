@@ -1,0 +1,103 @@
+<section class="lumae-section lumae-routine">
+  <div class="lumae-page-width">
+    <div class="lumae-routine__header">
+      {% if section.settings.eyebrow != blank %}
+        <p class="lumae-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2 class="lumae-routine__heading">{{ section.settings.heading | escape }}</h2>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <div class="lumae-routine__text">{{ section.settings.text }}</div>
+      {% endif %}
+    </div>
+
+    <div class="lumae-routine__grid">
+      {% for block in section.blocks %}
+        <article class="lumae-routine-card" {{ block.shopify_attributes }}>
+          <span class="lumae-routine-card__number">{{ forloop.index }}</span>
+          {% if block.settings.title != blank %}
+            <h3 class="lumae-routine-card__title">{{ block.settings.title | escape }}</h3>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <div class="lumae-routine-card__text">{{ block.settings.text }}</div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lumae routine",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "3-step routine"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Fewer steps, more consistency."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>The project organizes products by real customer need: cleanse, treat, and protect. The architecture helps users shop without getting lost.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Cleanse"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Light textures that prepare the skin without tightness.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lumae routine",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "Cleanse",
+            "text": "<p>A gentle gel-cream to remove impurities while keeping the skin comfortable.</p>"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Treat",
+            "text": "<p>Serums with niacinamide, antioxidants, and smart hydration.</p>"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Protect",
+            "text": "<p>Moisturizer and SPF to support the skin barrier throughout the day.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

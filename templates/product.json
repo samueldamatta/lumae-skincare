@@ -36,7 +36,7 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": false
           }
         },
         "description": {
@@ -45,36 +45,36 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
+            "heading": "Benefits",
+            "icon": "heart",
+            "content": "<p>Light textures, a simple routine, and clear messaging help customers choose with confidence.</p>",
             "page": ""
           }
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
+            "heading": "Key ingredients",
+            "icon": "leaf",
+            "content": "<p>Fictional actives inspired by contemporary skincare: niacinamide, antioxidants, ceramides, and botanical extracts.</p>",
             "page": ""
           }
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
+            "heading": "How to use",
+            "icon": "check_mark",
+            "content": "<p>Apply during the recommended routine step. In the morning, finish with sunscreen. At night, pair with moisturizer.</p>",
             "page": ""
           }
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
+            "heading": "Shipping and returns",
+            "icon": "truck",
+            "content": "<p>Demo content: shipping, return policy, and delivery timelines should be configured in the real store admin.</p>",
             "page": ""
           }
         },
@@ -112,88 +112,46 @@
         "padding_bottom": 12
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
+    "routine": {
+      "type": "lumae-routine",
       "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
+        "step_1": {
+          "type": "step",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
+            "title": "Morning",
+            "text": "<p>Gentle cleanse, antioxidant serum, moisturizer, and SPF.</p>"
           }
         },
-        "image-with-text-1": {
-          "type": "text",
+        "step_2": {
+          "type": "step",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
+            "title": "Night",
+            "text": "<p>Cleanse, treat, and seal with a nourishing texture.</p>"
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "No excess",
+            "text": "<p>Organized information for a faster, more confident purchase.</p>"
           }
         }
       },
       "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
+        "step_1",
+        "step_2",
+        "step_3"
       ],
       "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column-0",
-        "column-1"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "eyebrow": "How it fits your routine",
+        "heading": "Choose by moment of use.",
+        "text": "<p>The product page complements admin product data with guidance, benefits, and purchase answers.</p>"
       }
     },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Complete your routine",
         "heading_size": "h2",
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
@@ -203,14 +161,13 @@
         "show_rating": false,
         "columns_mobile": "2",
         "padding_top": 36,
-        "padding_bottom": 28
+        "padding_bottom": 56
       }
     }
   },
   "order": [
     "main",
-    "image-with-text",
-    "multicolumn",
+    "routine",
     "related-products"
   ]
 }
