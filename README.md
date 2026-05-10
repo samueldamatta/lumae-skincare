@@ -1,41 +1,41 @@
 # Lumae Skincare
 
-Tema Shopify ficticio para portfolio, construido sobre o Dawn. A proposta e demonstrar uma loja premium de skincare com identidade visual propria, secoes customizadas em Liquid, templates Online Store 2.0 e documentacao de case.
+Fictional Shopify theme for a portfolio project, built on top of Dawn. The goal is to demonstrate a premium skincare store with its own visual identity, custom Liquid sections, Online Store 2.0 templates, and case study documentation.
 
-## O que foi implementado
+## What Was Built
 
-- Home customizada com hero editorial, colecao destaque, rotina em 3 passos, prova social e newsletter.
-- Templates de colecao e produto ajustados para uma loja de skincare.
-- Paginas customizadas para "Sobre" e "Case study".
-- CSS de marca em `assets/lumae.css`.
-- Secoes Liquid especificas:
+- Custom homepage with an editorial hero, featured collection, 3-step routine, social proof, and newsletter signup.
+- Collection and product templates adapted for a skincare store.
+- Custom pages for "About" and "Case Study".
+- Brand CSS in `assets/lumae.css`.
+- Custom Liquid sections:
   - `sections/lumae-hero.liquid`
   - `sections/lumae-routine.liquid`
   - `sections/lumae-editorial.liquid`
   - `sections/lumae-proof.liquid`
-- Paleta premium: off-white, sage, ink e dourado discreto.
-- Documentacao para configurar a loja e importar produtos ficticios.
+- Premium palette: off-white, sage, ink, and subtle gold.
+- Documentation for setting up the store and importing fictional products.
 
-## Como rodar com Shopify
+## Running With Shopify
 
-1. Crie uma loja de desenvolvimento no Shopify Partner/Dev Dashboard.
-2. Instale a Shopify CLI, se ainda nao tiver.
-3. No terminal, dentro deste projeto, rode:
+1. Create a development store in the Shopify Partner/Dev Dashboard.
+2. Install the Shopify CLI if you do not already have it.
+3. In the terminal, from this project directory, run:
 
 ```bash
-npx @shopify/cli@latest theme dev --store sua-loja.myshopify.com
+npx @shopify/cli@latest theme dev --store your-store.myshopify.com
 ```
 
-4. No admin da Shopify, importe os produtos de `docs/lumae-products.csv`.
-5. Crie as paginas `Sobre a Lumae` e `Case Study`, aplicando os templates `page.about` e `page.case-study`.
-6. Configure o menu principal para apontar para Home, Catalogo, Sobre e Case Study.
+4. In the Shopify admin, import the products from `docs/lumae-products.csv`.
+5. Create the pages `About Lumae` and `Case Study`, applying the `page.about` and `page.case-study` templates.
+6. Configure the main menu to point to Home, Catalog, About, and Case Study.
 
-Mais detalhes estao em `docs/SHOPIFY_SETUP.md`.
+More details are available in `docs/SHOPIFY_SETUP.md`.
 
 ## Portfolio
 
-Use `docs/CASE_STUDY.md` como base do texto do case. Depois de publicar ou visualizar a loja, complete o documento com prints reais da home, colecao, produto, carrinho e paginas institucionais.
+Use `docs/CASE_STUDY.md` as the base for the case study copy. After publishing or previewing the store, complete the document with real screenshots of the homepage, collection, product page, cart, and institutional pages.
 
-## Base
+## Foundation
 
-Este projeto usa o Dawn, tema oficial de referencia da Shopify para Online Store 2.0. A licenca original esta preservada em `LICENSE.md`.
+This project uses Dawn, Shopify's official reference theme for Online Store 2.0. The original license is preserved in `LICENSE.md`.
